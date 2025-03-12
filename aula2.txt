@@ -1,0 +1,380 @@
+>> linspace(0,10,5)
+ans =
+
+         0    2.5000    5.0000    7.5000   10.0000
+
+>>  m=[.1 .2 .3 .4 .5 ; .6 .7 .8 .9 1 ; 1.1 1.2 1.3 1.4 1.5] 
+m =
+
+   0.1000   0.2000   0.3000   0.4000   0.5000
+   0.6000   0.7000   0.8000   0.9000   1.0000
+   1.1000   1.2000   1.3000   1.4000   1.5000
+
+>> m(2,5)
+ans = 1
+>> m(5)
+ans = 0.7000
+>> m(3,1:4)
+ans =
+
+   1.1000   1.2000   1.3000   1.4000
+
+>> m(:,5)
+ans =
+
+   0.5000
+   1.0000
+   1.5000
+
+>> m(1,3;end)
+error: parse error:
+
+  syntax error
+
+>>> m(1,3;end)
+         ^
+>> m(1,3,end)
+ans = 0.3000
+>> m(1,3:end)
+ans =
+
+   0.3000   0.4000   0.5000
+
+>> m([1 3], [2 4])
+ans =
+
+   0.2000   0.4000
+   1.2000   1.4000
+
+>> m([1 5 9; 4 9 12)
+error: parse error:
+
+  syntax error
+
+>>> m([1 5 9; 4 9 12)
+                        ^
+>> m([1 5 9; 4 9 12)}
+error: parse error:
+
+  syntax error
+
+>>> m([1 5 9; 4 9 12)}
+                        ^
+>> m([1 5 9; 4 9 12)]
+error: parse error:
+
+  syntax error
+
+>>> m([1 5 9; 4 9 12)]
+                        ^
+>> m([1 5 9; 4 8 12]) 
+ans =
+
+   0.1000   0.7000   1.3000
+   0.2000   0.8000   1.4000
+
+>> m
+m =
+
+   0.1000   0.2000   0.3000   0.4000   0.5000
+   0.6000   0.7000   0.8000   0.9000   1.0000
+   1.1000   1.2000   1.3000   1.4000   1.5000
+
+>> x= [2 3; 5 7]
+x =
+
+   2   3
+   5   7
+
+>> y = [1 6; 2 4] 
+y =
+
+   1   6
+   2   4
+
+>> x+y
+ans =
+
+    3    9
+    7   11
+
+>> x+y;
+>> x+y
+ans =
+
+    3    9
+    7   11
+
+>> x-y
+ans =
+
+   1  -3
+   3   3
+
+>> x*y
+ans =
+
+    8   24
+   19   58
+
+>> x.*y
+ans =
+
+    2   18
+   10   28
+
+>> x/y
+ans =
+
+  -0.2500   1.1250
+  -0.7500   2.8750
+
+>> x^2
+ans =
+
+   19   27
+   45   64
+
+>> x.^2
+ans =
+
+    4    9
+   25   49
+
+>> a=-3
+a = -3
+>> b= 7
+b = 7
+>> a>b
+ans = 0
+>> a<b
+ans = 1
+>> a<b & a==b 
+ans = 0
+>> x=1:10:50
+x =
+
+    1   11   21   31   41
+
+>> x=1:10
+x =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> y=x>5
+y =
+
+  0  0  0  0  0  1  1  1  1  1
+
+>> y
+y =
+
+  0  0  0  0  0  1  1  1  1  1
+
+>> eye(3)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> rand(2,7)
+ans =
+
+   2.3101e-01   1.9465e-01   3.8462e-01   2.1202e-03   8.9289e-01   3.7627e-01   7.7534e-01
+   1.1929e-01   4.5100e-01   9.2854e-01   3.4544e-01   9.1400e-01   4.2135e-01   3.5279e-01
+
+>> rand(2,7)
+ans =
+
+   0.3958   0.3532   0.9293   0.1450   0.2268   0.7246   0.3096
+   0.2351   0.4063   0.3776   0.2206   0.5913   0.1973   0.2969
+
+>> a=[1 2;1 3]
+a =
+
+   1   2
+   1   3
+
+>> det(a)
+ans = 1
+>> inv(a)
+ans =
+
+   3  -2
+  -1   1
+
+>> size(a)
+ans =
+
+   2   2
+
+>> length( [11 12 13 ; 21 22 23] ) 
+ans = 3
+>> length( [11 12 13 ; 21 22 23 24] ) 
+error: vertical dimensions mismatch (1x3 vs 1x4)
+>> length( [11 12 13 14; 21 22 23 24] ) 
+ans = 4
+>> reshape(1:10,2,5)
+ans =
+
+    1    3    5    7    9
+    2    4    6    8   10
+
+>> reshape(1:60,1,6)
+error: reshape: can't reshape 1x60 array to 1x6 array
+>> reshape(rand(1:60,1,6))
+error: Invalid call to reshape.  Correct usage is:
+
+ -- B = reshape (A, M, N, ...)
+ -- B = reshape (A, [M N ...])
+ -- B = reshape (A, ..., [], ...)
+ -- B = reshape (A, SIZE)
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> b=[1 2 3 ; 4 5 6 ; 7 8 9] 
+b =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> rot90(b) 
+ans =
+
+   3   6   9
+   2   5   8
+   1   4   7
+
+>> rot180(b) 
+error: 'rot180' undefined near line 1, column 1
+>> rot190(b) 
+error: 'rot190' undefined near line 1, column 1
+>> rot190(b) 
+error: 'rot190' undefined near line 1, column 1
+>> rot90(b) 
+ans =
+
+   3   6   9
+   2   5   8
+   1   4   7
+
+>> rot45(b) 
+error: 'rot45' undefined near line 1, column 1
+>> fliplr(b) 
+ans =
+
+   3   2   1
+   6   5   4
+   9   8   7
+
+>> flipup(b) 
+error: 'flipup' undefined near line 1, column 1
+>> flipud(b) 
+ans =
+
+   7   8   9
+   4   5   6
+   1   2   3
+
+>> diag(b)
+ans =
+
+   1
+   5
+   9
+
+>> diag(ans)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   5   0
+   0   0   9
+
+>> triu(b)
+ans =
+
+   1   2   3
+   0   5   6
+   0   0   9
+
+>> tril(b)
+ans =
+
+   1   0   0
+   4   5   0
+   7   8   9
+
+>> b
+b =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> sum(b)
+ans =
+
+   12   15   18
+
+>> sum(sum(b))
+ans = 45
+>> prod([2 3 1; 2 4 5]) 
+ans =
+
+    4   12    5
+
+>> prod(ans) 
+ans = 240
+>> mean( [1 -2 3 -4; 5 -6 7 -8] ) 
+ans =
+
+   3  -4   5  -6
+
+>> mean(mean( [1 -2 3 -4; 5 -6 7 -8] ))
+ans = -0.5000
+>> max( [1 -2 3 -4; 5 -6 7 -8] ) 
+ans =
+
+   5  -2   7  -4
+
+>> max(max( [1 -2 3 -4; 5 -6 7 -8] ) )
+ans = 7
+>> min(ans) 
+ans = 7
+>> min(min( [1 -2 3 -4; 5 -6 7 -8] )) 
+ans = -8
+>> x=sort( [1 -2 3 -4 5 -6 7 -8] ) 
+x =
+
+  -8  -6  -4  -2   1   3   5   7
+
+>> x=sort(sort( [1 -2 3 -4 5 -6 7 -8] )) 
+x =
+
+  -8  -6  -4  -2   1   3   5   7
+
+>> x=sort(sort( [1 -2 3 -4; 5 -6 7 -8] )) 
+x =
+
+   1  -6   3  -8
+   5  -2   7  -4
+
+>> x=sort( [1 -2 3 -4; 5 -6 7 -8] )
+x =
+
+   1  -6   3  -8
+   5  -2   7  -4
+
+>> save aula2
+>> diary off
